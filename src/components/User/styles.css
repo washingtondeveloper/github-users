@@ -1,0 +1,16 @@
+.card {
+  width: 19rem;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .user-image {
+  position: absolute;
+  border-radius: 60%;
+  width: 50%;
+  top: 22px;
+  left: 5rem;
+}
