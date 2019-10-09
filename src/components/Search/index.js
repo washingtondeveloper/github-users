@@ -1,19 +1,26 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Creators } from "../../store/ducks/users";
 
 import "./styles.css";
 
 export default function Search() {
+  const { nameDescription } = useSelector(state => state.users);
+  const dispatch = useDispatch();
+
   return (
-    <div class="input-group mb-2">
+    <div className="input-group mb-2">
       <input
         type="text"
-        class="form-control"
+        className="form-control"
         id="inlineFormInputGroup"
         placeholder="GitUser"
+        value={nameDescription}
+        onChange={e => dispatch(Creators.changeDescription(e.target.value))}
       />
-      <div class="input-group-prepend">
-        <button class="btn btn-primary">
-          <i class="fa fa-search" aria-hidden="true"></i>
+      <div className="input-group-prepend">
+        <button className="btn btn-primary">
+          <i className="fa fa-search" aria-hidden="true"></i>
         </button>
       </div>
     </div>
