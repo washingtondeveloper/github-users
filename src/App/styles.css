@@ -1,1 +1,31 @@
 @import url("https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.gs-header {
+  grid-area: gs-header;
+}
+
+.gs-content {
+  grid-area: gs-content;
+}
+
+.gs-footer {
+  grid-area: gs-footer;
+}
+
+.gs-main {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 45px;
+  grid-template-areas:
+    "gs-header"
+    "gs-content"
+    "gs-footer";
+}

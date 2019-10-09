@@ -1,11 +1,14 @@
-.gs-footer {
+.gs-logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.gs-footer p {
+.gs-logo img {
+  width: 80px;
+}
+
+.gs-logo h1 {
   font-family: "Pacifico", cursive;
-  padding-top: 10px;
 }
