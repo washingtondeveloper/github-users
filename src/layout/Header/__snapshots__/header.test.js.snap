@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Header Deve renderizar sem erros 1`] = `
+<header
+  className="gs-header"
+>
+  <div
+    className="gs-logo"
+  >
+    <div>
+      <img
+        alt="github"
+        src="git.png"
+      />
+    </div>
+    <h1>
+      GitUsers
+    </h1>
+  </div>
+</header>
+`;

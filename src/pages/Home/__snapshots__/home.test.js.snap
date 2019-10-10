@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Home Deve renderizar sem erros 1`] = `
+<div
+  className="gs-home"
+>
+  <div
+    className="input-group mb-2"
+  >
+    <input
+      className="form-control"
+      id="inlineFormInputGroup"
+      onChange={[Function]}
+      placeholder="GitUser"
+      type="text"
+      value=""
+    />
+    <div
+      className="input-group-prepend"
+    >
+      <button
+        className="btn btn-primary"
+        disabled={true}
+        onClick={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-search"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="card"
+  >
+    <img
+      alt="background"
+      className="card-img-top"
+      src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
+    />
+    <img
+      alt="user"
+      className="user-image"
+      src="git.png"
+    />
+    <div
+      className="card-body"
+    >
+      <h5
+        className="card-title text-center"
+      >
+        <div
+          className="css-mkgss9-BallBeat"
+        >
+          <div />
+          <div />
+          <div />
+        </div>
+      </h5>
+    </div>
+  </div>
+  <ul
+    className="list-group"
+  />
+</div>
+`;

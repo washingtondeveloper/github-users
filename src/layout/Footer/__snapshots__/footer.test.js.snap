@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Footer Deve renderizar sem erros 1`] = `
+<footer
+  className="gs-footer"
+>
+  <p>
+    GitUser - 
+    2019
+  </p>
+</footer>
+`;
