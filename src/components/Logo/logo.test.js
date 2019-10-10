@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Logo from "./";
 
-describe("COmponent", () => {
+describe("Logo Component", () => {
   let wrapper;
   beforeAll(() => {
     wrapper = shallow(<Logo />);
