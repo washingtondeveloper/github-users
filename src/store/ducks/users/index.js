@@ -5,7 +5,22 @@ export const { Types, Creators } = createActions({
   addRepos: ["repos"],
   loading: null,
   loadingUserSuccess: ["user"],
-  loadingUserFailure: ["error"]
+  loadingUserFailure: ["error"],
+  fetchUser: nameDescription => {
+    return dispatch => {
+      dispatch(Creators.loading());
+      fetch(
+        `https://api.github.com/users/${
+          nameDescription ? nameDescription : "mojombo"
+        }/repos`
+      )
+        .then(res => res.json())
+        .then(repos => {
+          dispatch(Creators.addRepos(repos));
+          dispatch(Creators.loadingUserSuccess(repos[0].owner));
+        });
+    };
+  }
 });
 
 const INITIAL_STATE = {

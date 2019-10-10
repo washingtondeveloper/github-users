@@ -1,34 +1,36 @@
-import React from "react";
+import React, { useEffect, useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Creators } from "../../store/ducks/users";
 
 import "./styles.css";
 
 export default function Repos() {
+  const dispatch = useDispatch();
+  const { list } = useSelector(state => state.users);
+
+  const initFetch = useCallback(() => {
+    dispatch(Creators.fetchUser());
+  }, [dispatch]);
+
+  useEffect(() => {
+    initFetch();
+  }, [initFetch]);
+
   return (
     <ul className="list-group">
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        Cras justo odio
-        <span className="badge badge-primary badge-pill">14</span>
-      </li>
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        Dapibus ac facilisis in
-        <span className="badge badge-primary badge-pill">2</span>
-      </li>
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        Morbi leo risus
-        <span className="badge badge-primary badge-pill">1</span>
-      </li>
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        Morbi leo risus
-        <span className="badge badge-primary badge-pill">1</span>
-      </li>
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        Morbi leo risus
-        <span className="badge badge-primary badge-pill">1</span>
-      </li>
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        Morbi leo risus
-        <span className="badge badge-primary badge-pill">1</span>
-      </li>
+      {list.map(repo => (
+        <li
+          key={repo.id}
+          className="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <a href={repo.html_url} target={repo.name}>
+            {repo.name}
+          </a>
+          <span className="badge badge-primary badge-pill">
+            {repo.stargazers_count}
+          </span>
+        </li>
+      ))}
     </ul>
   );
 }
