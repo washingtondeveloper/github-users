@@ -21,6 +21,10 @@ describe("Users Actions", () => {
     test("Deve retornar CHANGE_DESCRIPTION type", () => {
       expect(Types.CHANGE_DESCRIPTION).toEqual("CHANGE_DESCRIPTION");
     });
+
+    test("Deve retornar RESET_PROPERTIES type", () => {
+      expect(Types.RESET_PROPERTIES).toEqual("RESET_PROPERTIES");
+    });
   });
   describe("Actions Creators", () => {
     test("Deve retornar a action loading", () => {
@@ -52,6 +56,12 @@ describe("Users Actions", () => {
       expect(Creators.loadingUserFailure("erro")).toEqual({
         type: "LOADING_USER_FAILURE",
         error: "erro"
+      });
+    });
+
+    test("Deve retornar a action resetProperties", () => {
+      expect(Creators.resetProperties()).toEqual({
+        type: "RESET_PROPERTIES"
       });
     });
   });

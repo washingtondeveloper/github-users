@@ -78,4 +78,18 @@ describe("Users Reducer", () => {
       error: "User not found"
     });
   });
+
+  test("Deve resetar para o inicial state", () => {
+    expect(
+      reducer(undefined, {
+        type: "RESET_PROPERTIES"
+      })
+    ).toEqual({
+      user: null,
+      list: [],
+      nameDescription: "",
+      loading: false,
+      error: null
+    });
+  });
 });

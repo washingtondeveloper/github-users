@@ -11,7 +11,7 @@ export default function Search() {
   function handleSubmit() {
     if (nameDescription.trim().length === 0) return;
     dispatch(Creators.fetchUser(nameDescription));
-    dispatch(Creators.changeDescription(""));
+    dispatch(Creators.resetProperties());
   }
 
   return (
