@@ -26,7 +26,7 @@ export default function Repos() {
           <a href={repo.html_url} target={repo.name}>
             {repo.name}
           </a>
-          <span className="badge badge-primary badge-pill">
+          <span className="badge badge-primary badge-pill" title="Estrelas">
             {repo.stargazers_count}
           </span>
         </li>
