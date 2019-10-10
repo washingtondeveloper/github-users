@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Creators } from "../../store/ducks/users";
+import { Creators } from "@/store/ducks/users";
 
 import "./styles.css";
 

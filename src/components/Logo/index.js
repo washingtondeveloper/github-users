@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "../../assets/git.png";
+import logo from "@/assets/git.png";
 import "./styles.css";
 
 export default function Logo() {

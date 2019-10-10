@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Creators } from "../../store/ducks/users";
+import { Creators } from "@/store/ducks/users";
 
 import "./styles.css";
 
