@@ -11,7 +11,7 @@ export default function User() {
       <img
         src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
         className="card-img-top"
-        alt=""
+        alt="background"
       />
       <img className="user-image" src={user && user.avatar_url} alt="user" />
       <div className="card-body">
