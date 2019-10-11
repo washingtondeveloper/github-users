@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Desafio Dasa Front-End
 
-## Available Scripts
+## GitUser
 
-In the project directory, you can run:
+## O que foi utilizado no desenvolvimento
 
-### `yarn start`
+- React - Crianção dos componetes
+- Redux - Tratamento de Estados
+- Redux-Thunk - Para fazer meus Fetchs
+- Jest - Para meus Test Units
+- Reduxsauce - Organizar meus Actions Reducers e Actions Types
+- [Duck](https://github.com/erikras/ducks-modular-redux) - Pattern para Unificar minhas Actions e Reducers
+- Bootstrap - Para estilizar meus componentes
+- Font-Awsome - Para os icones.
+- react-app-rewired - Faciliando os paths da aplicação, onde eu posso configurar apartir da pasta `src` um simbolo, escolhi o `@`, exemplo: Desejo importar um componente que esta da pasta `src/component/Header`, não preciso voltar para entrar nessa pasta `../../components/Header` e sim `@/components/Header` [mais detalhes](https://github.com/timarney/react-app-rewired).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Inciar aplicação
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Usando NPM ou Yarn
 
-### `yarn test`
+- Fazendo o clone ou download do zip, depois executando o `npm i` ou caso tenha o yarn `yarn` para baixar as dependencias.
+- Depois execute `npm start` ou `yarn start` para iniciar a aplicação.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Usando Docker
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Logo apos fazer o download ou clone do projeto, execute o comando dentro da pasta do projeto `docker image build -t "escolha_um_nome" .`, lembrando que é necessario vc esta dentro da pasta do projeto, e no final desse comando não esqueça do ' ponto `.` ' logo no final.
+- Depois execute o comando `docker run -p 8000:80 "o_nome_que_vc_escolheu"`.
+- Agora abra seu browser em `http://localhost:8000`.
