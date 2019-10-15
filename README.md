@@ -26,3 +26,6 @@
 - Logo apos fazer o download ou clone do projeto, execute o comando dentro da pasta do projeto `docker image build -t "escolha_um_nome" .`, lembrando que é necessario vc esta dentro da pasta do projeto, e no final desse comando não esqueça do ' ponto `.` ' logo no final.
 - Depois execute o comando `docker run -p 8000:80 "o_nome_que_vc_escolheu"`.
 - Agora abra seu browser em `http://localhost:8000`.
+#### Executando diretamento como imagem
+- ` docker container run -p 8000:80 washingtondeveloper/docker-git-users:1.0 ` execute esse comando para executar baixar a imagem e logo apos executar.
+- Agora abra seu browser em `http://localhost:8000`.
